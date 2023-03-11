@@ -24,4 +24,6 @@ Over the coming weeks, I am going to turn this from a flaming dumpster fire of a
 * Getting all of the needed forms of authentication working (currently just Google works)
 * Getting Issues set up to track and prioritize the backlog. 
 
+Here is a link to the newly created backlog: https://github.com/dyor/scoop/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc
+
 If you know Android Architecture and/or Kotlin and would like to help out, please email matt at dyor dot com and get involved. If you have some ideas on design or functioality, I would love to see/read them. I am hoping to build out this basic pattern for buying and selling time between trusted parties, and then apply it to some specific areas that are interesting to me. 
