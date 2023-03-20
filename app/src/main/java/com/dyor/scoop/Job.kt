@@ -1,6 +1,7 @@
 package com.dyor.scoop
 
 import android.os.Parcelable
+import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import com.google.firebase.Timestamp
 import kotlinx.android.parcel.Parcelize
 
@@ -36,4 +37,14 @@ enum class Status {
   FINISHED,
   PAID,
   ARCHIVED
+}
+
+class SampleJobProvider: PreviewParameterProvider<Job> {
+  override val values = sequenceOf(Job(
+    "xyz123",
+    "Sample Job Name",
+    "buyerId",
+    "sellerId",
+    "This is the ultimate description of the this and that and the other"
+  ))
 }

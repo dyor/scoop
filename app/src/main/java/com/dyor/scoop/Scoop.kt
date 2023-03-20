@@ -1,5 +1,6 @@
 package com.dyor.scoop
 import android.os.Parcelable
+import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import com.google.firebase.Timestamp
 import kotlinx.android.parcel.Parcelize
 
@@ -19,3 +20,11 @@ data class Scoop(
 
   ) : Parcelable
 
+class SampleScoopProvider: PreviewParameterProvider<Scoop> {
+  override val values = sequenceOf(Scoop(
+    "xyz123",
+    "Sample Scoop Name",
+    "user1",
+    "This is my big awesome Scoop"
+  ))
+}
