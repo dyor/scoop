@@ -26,6 +26,8 @@ class Job(
   var paidAt: Timestamp? = null,
   var archivedAt: Timestamp? = null,
   var status: Status? = null,
+  var isASeller: Boolean = false,
+  var viewerUid: String? = null,
 
 
   ) : Parcelable
@@ -45,6 +47,21 @@ class SampleJobProvider: PreviewParameterProvider<Job> {
     "Sample Job Name",
     "buyerId",
     "sellerId",
-    "This is the ultimate description of the this and that and the other"
+    "This is the ultimate description of the this and that and the other",
+    null,
+    null,
+    null,
+    1.0,
+    1.0,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    true,
+    "xyz",
   ))
 }
