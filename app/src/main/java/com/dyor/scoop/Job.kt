@@ -1,6 +1,7 @@
 package com.dyor.scoop
 
 import android.os.Parcelable
+import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import com.google.firebase.Timestamp
 import kotlinx.android.parcel.Parcelize
 
@@ -25,6 +26,8 @@ class Job(
   var paidAt: Timestamp? = null,
   var archivedAt: Timestamp? = null,
   var status: Status? = null,
+  var isASeller: Boolean = false,
+  var viewerUid: String? = null,
 
 
   ) : Parcelable
@@ -36,4 +39,29 @@ enum class Status {
   FINISHED,
   PAID,
   ARCHIVED
+}
+
+class SampleJobProvider: PreviewParameterProvider<Job> {
+  override val values = sequenceOf(Job(
+    "xyz123",
+    "Sample Job Name",
+    "buyerId",
+    "sellerId",
+    "This is the ultimate description of the this and that and the other",
+    null,
+    null,
+    null,
+    1.0,
+    1.0,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    true,
+    "xyz",
+  ))
 }
